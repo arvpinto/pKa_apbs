@@ -15,7 +15,7 @@ RESNUM="$2"
 : > ee_RES_enz.dat
 : > ee_no_RES.dat
 
-for x in frame*.gro; do
+for x in $(ls frame*gro | sort -V); do
     echo "Processing $x ..."
 
     # temporary working directories
